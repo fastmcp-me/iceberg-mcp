@@ -1,10 +1,11 @@
-from typing import TypedDict
 import logging
+from typing import TypedDict
+
 import boto3
-import httpx
 from mcp.server.fastmcp import FastMCP
 from pyiceberg.catalog import Catalog
 from pyiceberg.catalog.glue import GlueCatalog
+
 from iceberg_mcp import iceberg_config
 
 logger = logging.getLogger("iceberg-mcp")
@@ -44,7 +45,7 @@ def get_table_schema(
 ) -> list[SchemaField]:
     """Provides the schema for a given Iceberg table""" 
     catalog: Catalog = get_catalog()
-    table_obj = catalog.load_table(f'{namespace}.{table_name}')
+    table_obj = catalog.load_table((namespace, table_name))
     schema = table_obj.schema()
 
     fields = []
@@ -68,11 +69,11 @@ def get_table_properties(
         table_name: str
 ) -> dict:
     catalog: Catalog = get_catalog()
-    table_obj = catalog.load_table(f'{namespace}.{table_name}')
+    table_obj = catalog.load_table((namespace, table_name))
     partition_specs = [p.dict() for p in table_obj.metadata.partition_specs]
     sort_orders = [s.dict() for s in table_obj.metadata.sort_orders]
     current_snapshot = table_obj.current_snapshot()
-    if not current_snapshot:
+    if not current_snapshot or not current_snapshot.summary:
         return {}
     return {
         "total_size_in_bytes": current_snapshot.summary["total-files-size"],
@@ -90,7 +91,7 @@ def get_table_partitions(
 ) -> list[dict[str, int]]:
     """Provides the partitions for a given Iceberg table""" 
     catalog: Catalog = get_catalog()
-    table_obj = catalog.load_table(f'{namespace}.{table_name}')
+    table_obj = catalog.load_table((namespace, table_name))
     partitions = table_obj.inspect.partitions().to_pylist()
 
     result = []
