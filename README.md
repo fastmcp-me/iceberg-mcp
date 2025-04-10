@@ -10,11 +10,11 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/iceberg-mcp.svg)](https://pypi.org/project/iceberg-mcp)
 [![License](https://img.shields.io/github/license/ryft-io/iceberg-mcp)](https://github.com/ryft-io/iceberg-mcp/blob/main/LICENSE)
 
-<video src="https://github.com/user-attachments/assets/907180f3-27ad-401a-9fa0-f3178cd290de"></video>
-
 </div>
 
 IcebergMCP is a [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) server that allows interacting with your [Apache Iceberg](https://iceberg.apache.org/) Lakehouse via natural language in Claude, Cursor, or any other MCP client.
+
+<video src="https://github.com/user-attachments/assets/907180f3-27ad-401a-9fa0-f3178cd290de"></video>
 
 <!-- omit in toc -->
 ## Table of Contents
