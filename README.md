@@ -12,7 +12,7 @@
 
 </div>
 
-IcebergMCP is a [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) server that allows interacting with your [Apache Iceberg](https://iceberg.apache.org/) Lakehouse via natural language in Claude, Cursor, or any other MCP client.
+IcebergMCP is a [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) server that lets you interact with your [Apache Iceberg](https://iceberg.apache.org/) Lakehouse using natural language in Claude, Cursor, or any other MCP client.
 
 <video src="https://github.com/user-attachments/assets/907180f3-27ad-401a-9fa0-f3178cd290de"></video>
 
