@@ -8,7 +8,7 @@
 <strong>AI-native Lakehouse Integration</strong>
 
 [![PyPI - Version](https://img.shields.io/pypi/v/iceberg-mcp.svg)](https://pypi.org/project/iceberg-mcp)
-[![License](https://img.shields.io/github/license/ryft-io/iceberg-mcp.svg)](https://github.com/ryft-io/iceberg-mcp/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/ryft-io/iceberg-mcp)](https://github.com/ryft-io/iceberg-mcp/blob/main/LICENSE)
 
 
 </div>
