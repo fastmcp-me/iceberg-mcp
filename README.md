@@ -12,7 +12,7 @@
 
 </div>
 
-IcebergMCP is a [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) server that lets you interact with your [Apache Iceberg](https://iceberg.apache.org/) Lakehouse using natural language in Claude, Cursor, or any other MCP client.
+IcebergMCP is a [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) server that lets you interact with your [Apache Iceberg™](https://iceberg.apache.org/) Lakehouse using natural language in Claude, Cursor, or any other MCP client.
 
 <video src="https://github.com/user-attachments/assets/907180f3-27ad-401a-9fa0-f3178cd290de"></video>
 
@@ -35,7 +35,7 @@ IcebergMCP is a [Model Context Protocol](https://modelcontextprotocol.io/) (MCP)
 
 ### Prerequisites
 
-- Iceberg catalog managed in AWS Glue
+- Apache Iceberg™ catalog managed in AWS Glue
 - AWS profile configured on the machine, with access to the catalog
 - `uv` package manager - install via `brew install uv` or see [official installation guide](https://docs.astral.sh/uv/getting-started/installation/)
 
@@ -99,9 +99,9 @@ Environment variables can be used to configure the AWS connection:
 
 ## Available Tools
 
-The server provides the following tools for interacting with your Iceberg tables:
+The server provides the following tools for interacting with your Apache Iceberg™ tables:
 
-- `get_namespaces`: Gets all namespaces in the Iceberg catalog
+- `get_namespaces`: Gets all namespaces in the Apache Iceberg™ catalog
 - `get_iceberg_tables`: Gets all tables for a given namespace
 - `get_table_schema`: Returns the schema for a given table
 - `get_table_properties`: Returns table properties for a given table, like total size and record count
@@ -110,7 +110,7 @@ The server provides the following tools for interacting with your Iceberg tables
 
 ## Examples
 
-Once installed and configured, you can start interacting with your Iceberg tables through your MCP client. Here are some simple examples of how to interact with your lakehouse:
+Once installed and configured, you can start interacting with your Apache Iceberg™ tables through your MCP client. Here are some simple examples of how to interact with your lakehouse:
 
 1. "List all namespaces in my catalog"
 2. "List all tables for the namespace called `bronze`"
@@ -125,7 +125,7 @@ Once installed and configured, you can start interacting with your Iceberg table
 - All tools are currently read-only and cannot modify or delete data from your lakehouse
 - Currently supported catalogs:
   - AWS Glue
-  - Iceberg REST Catalog (coming soon!)
+  - Apache Iceberg™ REST Catalog (coming soon!)
 
 ## Contributing
 
